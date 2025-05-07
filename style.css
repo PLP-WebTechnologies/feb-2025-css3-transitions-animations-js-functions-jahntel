@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4d9fef, #112d6a);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 600px;
+    max-width: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  h1 {
+    margin: 20px 0 10px 0;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(255 255 255 / 0.6);
+    font-size: 1.8rem;
+  }
+  p.subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 0 30px 0;
+    color: #cce3ffcc;
+    text-align: center;
+  }
+  /* Animated button with smooth transitions*/
+  .anim-button {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #112d6a;
+    background-color: #79b0ff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px #4482f1cc;
+    transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    user-select: none;
+    outline-offset: 4px;
+  }
+  .anim-button:hover {
+    background-color: #3a7ade;
+    box-shadow: 0 10px 22px #2c5bc2cc;
+    transform: scale(1.08);
+  }
+  .anim-button:active {
+    transform: scale(0.95);
+  }
+  /* Cool color variant if stored preference is 'blue' */
+  .blue-theme {
+    background-color: #79b0ff;
+    color: #112d6a;
+  }
+  /* Alternative theme if preference is 'coral' */
+  .coral-theme {
+    background-color: #ff6f61;
+    color: #fff;
+    box-shadow: 0 6px 15px #ff473fcc;
+  }
+  .coral-theme:hover {
+    background-color: #e6453a;
+    box-shadow: 0 10px 22px #bf3a2fcc;
+  }
+  /* Animated image container */
+.image-container {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 30px;
+    perspective: 1000px;
+  }
+  img.animated-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px #00000088;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  /* Animation triggered by JS - shake effect */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(-10px) rotate(-5deg); }
+    30% { transform: translateX(10px) rotate(5deg); }
+    45% { transform: translateX(-8px) rotate(-4deg); }
+    60% { transform: translateX(8px) rotate(4deg); }
+    75% { transform: translateX(-5px) rotate(-3deg); }
+    90% { transform: translateX(5px) rotate(3deg); }
+    100% { transform: translateX(0) rotate(0deg);}
+  }
+  .shake-animation {
+    animation: shake 0.6s ease;
+  }
+  /* Fade in/out animation for button text change */
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .fade-text {
+    animation: fadeInOut 1s ease;
+  }
+/* Responsive adjustments for smaller mobile */
+@media (max-width: 350px) {
+    body {
+      padding: 15px 12px;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    .anim-button {
+      font-size: 1rem;
+      padding: 12px 24px;
+    }
+    .image-container {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 24px;
+    }
+  }  
